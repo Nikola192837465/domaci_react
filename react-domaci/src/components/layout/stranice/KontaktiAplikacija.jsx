@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import Title from "../../Title";
 
+import Data from "../../../Data.json";
+
 export default function KontaktiAplikacija() {
   //fokus na polju za pretragu odmah pri ucitavanju stranice
   let inputSearch = useRef(null);
@@ -24,7 +26,13 @@ export default function KontaktiAplikacija() {
       <section
         className="d-flex"
         style={{ gap: 15, maxWidth: 1600, margin: "auto" }}
-      ></section>
+      >
+        {Data.map((contact) => (
+          <ul>
+            <li>{contact.last_name}</li>
+          </ul>
+        ))}
+      </section>
     </div>
   );
 }
