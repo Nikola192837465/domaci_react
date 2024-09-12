@@ -4,7 +4,7 @@ import Title from "../../Title";
 import Data from "../../../Data.json";
 import Kontakt from "./Kontakt";
 
-export default function KontaktiAplikacija() {
+export function KontaktiAplikacija() {
   //fokus na polju za pretragu odmah pri ucitavanju stranice
   let inputSearch = useRef(null);
   useEffect(() => {
@@ -15,20 +15,21 @@ export default function KontaktiAplikacija() {
 
   return (
     <div>
-      <Title classes={"title"} text={"Kontakti"} />
-      <Title classes={"subtitle"} text={"aplikacija"} />
+      <Title classes={"title text-center"} text={"Kontakti"} />
+      <Title classes={"subtitle text-center"} text={"aplikacija"} />
 
-      <input
-        type="text"
-        placeholder="Kljuc za pretragu kontakata..."
-        className="mb-2"
-        style={{ padding: ".5rem 7rem" }}
-        ref={inputSearch}
-        onChange={(e) => setPretragaKontakta(e.target.value)}
-      />
-
+      <div className="text-center">
+        <input
+          type="text"
+          placeholder="Kljuc za pretragu kontakata..."
+          className="text-center"
+          style={{ padding: ".5rem 7rem", textAlign: "center" }}
+          ref={inputSearch}
+          onChange={(e) => setPretragaKontakta(e.target.value)}
+        />
+      </div>
       <section
-        className="d-flex text-left"
+        className="d-flex"
         style={{ gap: 15, maxWidth: 1600, margin: "auto", flexWrap: "wrap" }}
       >
         {Data.filter((kontakt) => {

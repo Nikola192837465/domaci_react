@@ -72,6 +72,10 @@
   text-align: left;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .title {
   font-size: 3.75rem;
   margin: 0.3rem;
