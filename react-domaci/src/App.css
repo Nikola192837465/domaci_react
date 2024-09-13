@@ -43,7 +43,7 @@
 }
 
 .card-header {
-  background-color: maroon;
+  background-color: rgb(57, 140, 228);
   color: white;
   padding: 10px;
   font-weight: bold;
@@ -85,4 +85,35 @@
   font-size: 1rem;
   margin-bottom: 1rem;
   margin-top: 0;
+}
+
+/* CSS for pagination */
+.paginationBttns {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.previousBttn,
+.nextBttn {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.paginationDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.paginationActive {
+  background-color: #333;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.5rem 0.9rem;
 }

@@ -32,8 +32,8 @@ export function Header() {
               </Link>
             </li>
             <li className="new-nav-item">
-              <Link className="new-nav-link text-uppercase" to="/onama">
-                O nama
+              <Link className="new-nav-link text-uppercase" to="/paginacija">
+                Pretraga mejlova po stranama
               </Link>
             </li>
           </ul>
